@@ -1,70 +1,130 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Courses Project
 
-## Available Scripts
+This is a **React-based** web application that displays a list of top courses from various categories. Users can filter the courses by category and interact with the courses by liking/unliking them. The design is built with **Tailwind CSS**, ensuring responsiveness and a modern look. The project also includes **toast notifications** for user feedback.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Category Filtering:** Users can filter courses based on different categories such as "Business," "Development," "Design," and more. A default "All" category shows all available courses.
+- **Like/Unlike Courses:** Users can like and unlike courses by clicking on a heart icon. Liked courses will be visually represented with a filled heart, while unliked courses will show an empty heart.
+- **Responsive Design:** The UI is built with Tailwind CSS to ensure it works seamlessly on different devices (mobile, tablet, desktop).
+- **Toast Notifications:** Users will receive feedback when liking/unliking courses through toast notifications using `react-toastify`.
+- **Dynamic Course Data:** Courses are dynamically fetched from an external API, allowing the list to be updated easily.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation and Setup
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- **Node.js** (version 14 or above)
+- **npm** or **yarn**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Steps to Install
 
-### `npm run build`
+1. Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    git clone https://github.com/your-username/courses-project.git
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Navigate to the project directory:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    cd courses-project
+    ```
 
-### `npm run eject`
+3. Install the dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    npm install
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    or
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ```bash
+    yarn install
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Start the development server:
 
-## Learn More
+    ```bash
+    npm start
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    or
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ```bash
+    yarn start
+    ```
 
-### Code Splitting
+5. Open your browser and go to `http://localhost:3000` to see the app in action.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Project Structure
 
-### Analyzing the Bundle Size
+- **src/components/Navbar.js**: Displays the project title "Top Courses" in a styled navbar.
+- **src/components/Filter.js**: Renders the category filter buttons. Each button corresponds to a course category and applies a filter when clicked.
+- **src/components/Card.js**: Displays individual course cards with the course image, title, description, and like/unlike functionality.
+- **src/components/Cards.js**: Manages and displays the list of courses based on the selected category.
+- **src/data.js**: Contains static data like category filters and the API URL for fetching the courses.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Directory Overview
 
-### Making a Progressive Web App
+```
+src
+│
+├── components
+│   ├── Navbar.js       # Navigation bar component
+│   ├── Filter.js       # Course category filter component
+│   ├── Cards.js        # Component for rendering multiple courses
+│   ├── Card.js         # Single course card component
+│
+├── data.js             # Data for filters and API URL
+│
+├── App.js              # Main application component
+├── index.js            # Entry point for React
+└── ...
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## API Integration
 
-### Advanced Configuration
+The course data is fetched from an external API hosted at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```javascript
+export const apiUrl = "https://codehelp-apis.vercel.app/api/get-top-courses";
+```
 
-### Deployment
+This API provides a collection of courses across multiple categories, each with details such as the course title, image, description, and unique ID.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Technologies Used
 
-### `npm run build` fails to minify
+- **React**: JavaScript library for building user interfaces.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **React Icons**: A library of icons for React.
+- **React Toastify**: For toast notifications to provide user feedback.
+- **API Integration**: Fetches course data from an external API.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Improvements
+
+- **Add Search Functionality**: Implement a search bar to allow users to search for specific courses.
+- **Course Details Page**: Add a detailed view for each course with more information.
+- **Persistent Liked Courses**: Store liked courses in localStorage so they persist across page reloads.
+- **Loading State**: Display a loading spinner while fetching courses from the API.
+
+## Screenshots
+
+
+## License![Screenshot 2024-10-17 150000](https://github.com/user-attachments/assets/a23e2a28-f239-4905-abc3-38c72c57f2ea)
+
+
+
+![Screenshot 2024-10-17 150025](https://github.com/user-attachments/assets/bd1a7d79-6e38-44c0-b5ba-1cfeb32e4b71)
+
+![Screenshot 2024-10-17 150105](https://github.com/user-attachments/assets/409617e1-834a-45e4-a801-45cdbaf44302)
+
+![Screenshot 2024-10-17 150039](https://github.com/user-attachments/assets/5f0da022-ae64-47d5-9b58-53239ada96e1)
+![Screenshot 2024-10-17 150052](https://github.com/user-attachments/assets/886d6a73-47bd-486c-82cf-23036d6cc367)
+
+![Screenshot 2024-10-17 150123](https://github.com/user-attachments/assets/85cd391a-89da-46bd-b58c-082a069f9012)
+
+This project is open-source and available under the [MIT License](https://opensource.org/licenses/MIT).
+
+
