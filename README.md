@@ -3,7 +3,7 @@
 
 This is a **React-based** web application that displays a list of top courses from various categories. Users can filter the courses by category and interact with the courses by liking/unliking them. The design is built with **Tailwind CSS**, ensuring responsiveness and a modern look. The project also includes **toast notifications** for user feedback.
 
-#Check the Project Here 
+# Check the Project Here 
 https://courses-sigma.vercel.app/
 
 ## Features
