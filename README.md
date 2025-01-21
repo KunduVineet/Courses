@@ -128,6 +128,6 @@ This API provides a collection of courses across multiple categories, each with 
 
 ![Screenshot 2024-10-17 150123](https://github.com/user-attachments/assets/85cd391a-89da-46bd-b58c-082a069f9012)
 
-This project is open-source and available under the [MIT License](https://opensource.org/licenses/MIT).
+
 
 
